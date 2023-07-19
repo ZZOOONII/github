@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>과제용</title>
+</head>
+<body>
+  <h3>설문조사</h3>
+
+  이름 <input type="text">
+  <br>
+  이메일 <input type="text">
+  <br>
+
+  <h3>나이</h3> 
+  <input type="radio" name="age" value="10" id="age10"><label for="age10">10대</label>
+  <input type="radio" name="age" value="20" id="age20"><label for="age20">20대</label>
+  <input type="radio" name="age" value="30" id="age30"><label for="age30">30대</label>
+  <input type="radio" name="age" value="40" id="age40"><label for="age40">40대</label>
+  <input type="radio" name="age" value="50" id="age50"><label for="age50">50대</label>
+
+
+  <h3>원하는 강의 (복수응답가능합니다.)</h3> 
+  <input type="checkbox" name="want" value="html">html
+  <input type="checkbox" name="want" value="bjavascript">javascript
+  <input type="checkbox" name="want" value="css">css
+
+  <br>
+  <br>
+  <textarea cols="30" rows="10" placeholder="하고싶은 말을 써주세요 :)"></textarea>
+
+
+
+<form>
+      <h2>form 을 이용해서 제출용 폼 만들기!! (실습)</h2>
+      <h3>설문조사</h3>
+      <label for="name">이름</label><input type="text" id="name" />
+      <br />
+      <label for="email">이메일</label><input type="email" id="email" placeholder="love@example.com" />
+      <h4>나이</h4>
+      <input type="radio" name="age" id="ten" checked /><label for="ten">10대</label>
+      <input type="radio" name="age" id="twenty" /><label for="twenty">20대</label>
+      <input type="radio" name="age" id="thirty" /><label for="thirty">30대</label>
+      <input type="radio" name="age" id="fourty" /><label for="fourty">40대</label> <input type="radio" name="meat-animal" id="fifty" /><label
+        for="fifty"
+        >50대</label
+      >
+      <input type="radio" name="meat-animal" id="sixty" /><label for="sixty">60대 이상</label>
+      <h4>원하는 강의(복수응답가능합니다.)</h4>
+      <input type="checkbox" name="meat-animal" id="html" checked /><label for="html">html</label>
+      <input type="checkbox" name="meat-animal" id="js" /><label for="js">javascript</label>
+      <input type="checkbox" name="meat-animal" id="css" /><label for="css">css</label>
+      <br />
+      <br />
+      <textarea cols="100" rows="10" placeholder="하고 싶은 말을 써주세요: &#41;"></textarea>
+      <button>제출</button>
+    </form>
+
+
+
+    
+
+</body>
+</html>
