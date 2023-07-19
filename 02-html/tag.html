@@ -1,0 +1,188 @@
+
+<!-- emmet:키워드로 html 구조 잡아주는 것 -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tag 종류</title>
+</head>
+<body>
+  <h1>Tag 종류에 대해 배워보쟝</h1>
+  <h2>제목1</h2>
+  <h3>제목2</h3>
+  <h4>제목3</h4>
+  <h5>제목4</h5>
+  <h6>제목5</h6>
+  <P>여기는 본문태그입니다</P>
+  
+  <h3>오늘의 할일</h3>
+  <!-- ul tag type attribute : disc(default), square, cicle, none -->
+  <ul type="square">
+    <li>html 공부하기</li>
+    <li>운동하기</li>
+    <li>방청소하기</li>
+  </ul>
+
+  <h3>아이스 카페라떼 레시피</h3>
+  <!-- ol tag type attribute : 1(default), a, A, i, I -->
+  <!-- start attr:시작 번호, reverse:역순으로 -->
+  <ol type="1" start="4" reversed>
+    <li><strong>우유</strong>를 <em>180ml</em> 컵에 넣기</li>
+    <li><b>얼음</b>을 가득 넣기</li>
+    <li><i>에스프레소 샷</i>을 넣어주면</li>
+    <li> <u>완성</u> <del>맛있게 드세요!</del></li>
+  </ol>
+
+<!-- 카페 메뉴판 실습  -->
+  <hr>
+  <h3 style="color: blue;">스타벅스</h3>
+  <!-- ul tag type attribute : disc(default), square, cicle, none -->
+  <ul>
+      <li>
+          <h2> 딸기라떼 </h2>
+          <span> R : 5000원</span>
+          <span> L : 6000원</span>
+      </li>
+      <li>
+          <h2>옥수수라떼</h2>
+          <span> R : 5000원</span>
+          <span> L : 6000원</span>
+      </li>
+      <li>
+          <h2>메밀차</h2>
+          <span> R : 4000원</span>
+          <span> L : 5000원</span>
+      </li>
+      <li>
+          <h2>밤라떼</h2>
+          <span> R : 4000원</span>
+          <span> L : 5000원</span>
+      </li>
+      <li>
+          <h2>고구마라뗴</h2>
+          <span> R : 4000원</span>
+          <span> L : 5000원</span>
+      </li>
+  </ul>
+  <hr>
+  <h2>음료 설명</h2>
+  <P>부드러운 크림에 달달한 밤향과</P>
+  <span>시나몬향이 느껴지는</span>
+  <p>고소한 치즈밤라떼를 </p>
+  <span>먹어보세용</span>
+  </P>
+  <hr>
+<!-- 카페 메뉴판 실습  -->
+
+<!-- 리더님 소스 -->
+
+<a href="http://www.google.com" target="_blank" title="스타벅스">
+  <img src="./img/mnstarbucks.png" alt="새싹 팜플렛" width="500" height="">
+</a>
+<h1 style="color: blue;">스타벅스</h1>
+<ul>
+  <li>
+    <h2>아메리카노</h2>
+    <ol>
+      <li>R : 3000won</li>
+      <li>L : 3500won</li>
+    </ol>
+  </li>
+  <li>
+    <h2>카페라떼</h2>
+    <ol>
+      <li>R : 3000won</li>
+      <li>L : 3500won</li>
+    </ol>
+  </li>
+  <li>
+    <h2>딸기주스</h2>
+    <ol>
+      <li>R : 3000won</li>
+      <li>L : 3500won</li>
+    </ol>
+  </li>
+  <li>
+    <h2>레모네이드</h2>
+    <ol>
+      <li>R : 3000won</li>
+      <li>L : 3500won</li>
+    </ol>
+  </li>
+</ul>
+<hr />
+<h2>음료설명</h2>
+<p>아메리카노는 <b>물</b>에 에스프레소 샷을 탄 음료입니다.</p>
+<p>카페라떼는 <b>우유</b>에 에스프레소 샷을 탄 음료입니다.</p>
+<p>유기농 딸기를 넣고 만든 <strong>생과일</strong> 주스입니다.</p>
+<p>레몬 착즙 주스와 <b>탄산수</b>를 이용해 만든 <i>톡 쏘는 탄산음료</i>입니다.</p>
+<!-- 리더님 소스 -->
+
+
+  <!-- 수평줄 태그 -->
+  <hr>
+
+  <!-- 목록 태그의 중첩 사용 -->
+  <h3>내가 좋아하는 음식</h3>
+  <ul>
+    <li>
+      양식
+      <ul>
+        <li>수제버거</li>
+        <li>파스타</li>
+      </ul>
+    </li>
+    <li>한식
+      <ul>
+        <li>된장찌개</li>
+        <li>청국장</li>
+      </ul>
+    </li>
+    
+    <li>일식
+      <ul>
+        <li>초밥</li>
+        <li>라멘</li>
+      </ul>
+    </li>
+  </ul>
+
+  <hr>
+
+  <h1>img & a tag</h1>
+  <!-- 상대경로/절대경로 -->
+
+  <!-- 
+    . : 현재 
+    .. : 부모 
+    ./img/sesac/jpg : 현재 위치에서 img 폴더 안의 sesac.jpg 파일을 찾아라 -> 상대경로
+  -->
+
+  <!-- 상대경로로 이미지 위치 찾기 >> 추천 (현재 위치로부터 이미지 파일을 찾아가므로!!) -->
+  <img src="./img/sesac.jpeg" alt="새싹 팜플렛" width="500" height="">
+
+  <!-- 절대경로로 이미지 위치 찾기 -->
+  <img src="C:\Users\user\Desktop\github\02-html\img\sesac.jpg" alt="새싹 팜플렛" width="500" height="">
+  <img src="" alt="새싹 팜플렛" width="500" height="">
+  <br>
+  <br>
+  <!-- a tag target attribute: 링크가 열릴 위치 지정
+      -_self (default) : 현재 탭에서 열기
+      - _blank : 새 탭으로 열기
+  -->
+  <a href="http://www.naver.com" target="_blank">naver로 이동하기</a>
+  <a href="http://www.naver.com" >naver로 이동하기</a>
+  <a href="http://www.google.com" target="_blank" title="마우스 커서를 올리면 나타남">google로 이동하기</a>
+
+  <!-- a 태그는 인터넷 상의 주소 뿐만 아니라 폴더 내의 다른 html 문서로 이동이 가능하다 -->
+  <a href="./html-start.html">html-start 파일로 이동하기</a>
+
+
+  <a href="http://www.google.com" target="_blank" title="마우스 커서를 올리면 나타남">google로 이동하기</a>
+
+  
+
+
+</body>
+</html>
