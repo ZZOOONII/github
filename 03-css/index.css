@@ -1,0 +1,43 @@
+li {
+  font-size: 30px;
+  color:white;
+  background-color:black;
+}
+
+
+
+div:first-child {
+  background-color: red;
+  height: 50px;
+  width: 50px;
+}
+div:nth-child(2) {
+  background-color: orange;
+  height: 50px;
+  width: 100px;
+}
+div:nth-child(3) {
+  background-color: yellow;
+  height: 50px;
+  width: 150px;
+}
+div:nth-child(4) {
+  background-color: green;
+  height: 50px;
+  width: 200px;
+}
+div:nth-child(5) {
+  background-color: blue;
+  height: 50px;
+  width: 250px;
+}
+div:nth-child(6) {
+  background-color: navy;
+  height: 50px;
+  width: 300px;
+}
+div:last-child {
+  background-color: blueviolet;
+  height: 50px;
+  width: 350px;
+}
