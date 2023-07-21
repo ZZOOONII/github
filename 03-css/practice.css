@@ -1,0 +1,35 @@
+div {
+  position: absolute;
+}
+
+img {
+  /* 크기의 단위로 %를 사용
+      : 부모 요소의 n% 차지
+  */
+  width: 500px;
+  height: 300px;
+    transform: skewY(25deg);
+}
+
+.div3 {
+  border-radius: 50%;
+  top: 250px;
+  left: 100px;
+  z-index: 1;
+}
+
+.div2 {
+  border-radius: 50%;
+  top: 200px;
+  left: 300px;
+  z-index: -2;
+}
+
+.div1 {
+  top: 160px;
+  left: 600px;
+  z-index: -3;
+}
+
+
+

@@ -1,0 +1,42 @@
+/* 주석처리하깅 (ctrl + /) */
+
+/* 전체 선택자 */
+*{
+  color: navy;
+}
+
+/* 태그명 : 태그선택자 */
+h1 {
+  background-color: pink;
+}
+
+/* .클래스(class)명 : class 선택자 */
+.second {
+  background-color: aquamarine;
+}
+
+/* #아이디(id)명 : 아이디 선택자 */
+#first {
+  background-color: lightgreen;
+}
+
+.small {
+  font-size: 10px;
+}
+
+.big {
+  font-size: 20px;
+}
+
+/* 
+  class, id 차이 
+  - class : 그룹 
+  - id : 고유
+
+  ex.
+  "student"라는 클래스 값은 여러 요소에 사용될 수 있음
+  "teacher"라는 아이디 값은 한 요소에만 사용되어야 함
+*/
+
+
+/* ======================================================== */
