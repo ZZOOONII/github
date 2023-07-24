@@ -1,0 +1,54 @@
+.d-inline1 {
+  display: inline;
+  background-color: blue;
+}
+
+.d-inline2 {
+  display: inline;
+  background-color: red;
+}
+
+.d-block1 {
+  display: block;
+  background-color: blue;
+  width: 500px;
+}
+
+.d-block2 {
+  display: block;
+  background-color: red;
+  width: 400px;
+}
+
+.d-inline-block1 {
+  display:inline-block;
+  background-color: blue;
+}
+
+.d-inline-block2 {
+  display:inline-block;
+  background-color: red;
+  width: 200px;
+  height: 100px;
+
+  /* CSS 단축프로퍼티 */
+  margin: 20px;
+  /* margin-top: 20px; */
+  /* margin: 20px 40px 20px 40px; */
+  /* margin: 20px 40px; */
+}
+
+.d-none { 
+  display: none;
+  background-color: green;
+  width: 100px;
+  height: 100px;
+}
+
+.box {
+  /* visibility: hidden; */
+  visibility: visible; /* hidden이랑 반대 */
+  background-color: violet;
+  width: 100px;
+  height: 100px;
+}
