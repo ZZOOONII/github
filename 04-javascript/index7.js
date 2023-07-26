@@ -90,3 +90,4 @@ for (let i = 0; i < 100; i++) {
   sum3 = sum3 + i;
   console.log(i, sum3);
 }
+console.log;
