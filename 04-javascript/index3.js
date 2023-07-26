@@ -263,5 +263,5 @@ console.log(avgScore);
 
 // +) null, underfined를 숫자로 바꾼다면?
 console.log(Number(undefined), typeof Number(undefined)); // NaN, number
-// Not-A-Number(숫자가 아님)
+// Not-A-Number(숫자가)
 console.log(Number(null), typeof Number(undefined)); // 0, number
