@@ -178,3 +178,14 @@ console.log(result2);
 // 'str',includes() : true, false 반환 메서드
 const result3 = words.map((word) => word.includes("a"));
 console.log(result3);
+
+///////////////////////////////////////
+// for in 반복문
+// 객체의 key를 반복할 수 있는 구문
+
+const me = { name: "sean", gender: "f", hobby: "movie" };
+for (let key in me) {
+  console.log(key, me[key]);
+  // key : key
+  // value : me[key]
+}
