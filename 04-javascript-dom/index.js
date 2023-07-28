@@ -150,3 +150,5 @@ console.log(Math.floor(Math.random() * 100) + 1); // 내림
 
 // 20 ~ 22
 console.log(Math.floor(Math.random() * 3) + 20); // 내림
+
+//
