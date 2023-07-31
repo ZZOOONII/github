@@ -1,0 +1,43 @@
+.container {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: lightcoral;
+  justify-content: space-around;
+}
+
+.img {
+  display: flex;
+  margin: 5px;
+}
+
+.container > div {
+  display: flex;
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  margin: 5px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    height: 50px;
+    background-color: gainsboro;
+  }
+  .box {
+    background-color: aliceblue;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    display: flex;
+  }
+  .container > div {
+    display: flex;
+    flex-direction: column;
+  }
+}
