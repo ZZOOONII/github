@@ -105,3 +105,8 @@ console.log(num2); //11
 // +=, -= 연산자를 더 자주 씀!
 console.log((num += 1));
 console.log((num2 -= 1));
+
+console.log(!true);
+console.log(true && false);
+console.log(true || false);
+console.log(!!false && 3 > 5);
