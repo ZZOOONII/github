@@ -30,15 +30,15 @@
 // async/await 세트
 
 // 1초 뒤에 과일 배열을 출력하는 코드
-function fetchFruits() {
-  return new Promise(function (resolve, reject) {
-    setTimeout(function () {
-      const fruits = ["사과", "레몬", "수박"];
-      resolve(fruits);
-      //   reject(new Error('알 수 없는 에러 발생!! 아이템을 가져올 수 없음!!'));
-    }, 1000);
-  });
-}
+// function fetchFruits() {
+//   return new Promise(function (resolve, reject) {
+//     setTimeout(function () {
+//       const fruits = ["사과", "레몬", "수박"];
+//       resolve(fruits);
+//       //   reject(new Error('알 수 없는 에러 발생!! 아이템을 가져올 수 없음!!'));
+//     }, 1000);
+//   });
+// }
 
 // 1) promise then() 메서드 사용
 // fetchFruits()
@@ -62,31 +62,31 @@ function fetchFruits() {
 // printItems();
 
 ////////////////////////////////////////////
-function goMart() {
-  console.log("마트에 가서 어떤 음료를 살지 고민한다..");
-}
+// function goMart() {
+//   console.log("마트에 가서 어떤 음료를 살지 고민한다..");
+// }
 
-function pickDrink() {
-  return new Promise(function (resolve, reject) {
-    setTimeout(function () {
-      console.log("고민 끝!!!");
-      product = "제로콜라";
-      price = 2000;
-      resolve();
-    }, 3000);
-  });
-}
+// function pickDrink() {
+//   return new Promise(function (resolve, reject) {
+//     setTimeout(function () {
+//       console.log("고민 끝!!!");
+//       product = "제로콜라";
+//       price = 2000;
+//       resolve();
+//     }, 3000);
+//   });
+// }
 
-function pay() {
-  console.log(`상품명: ${product}, 가격: ${price}`);
-}
+// function pay() {
+//   console.log(`상품명: ${product}, 가격: ${price}`);
+// }
 
-async function exec() {
-  goMart();
-  await pickDrink();
-  pay();
-}
+// async function exec() {
+//   goMart();
+//   await pickDrink();
+//   pay();
+// }
 
-let product;
-let price;
-exec();
+// let product;
+// let price;
+// exec();

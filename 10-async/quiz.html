@@ -26,32 +26,57 @@
       // change(); //clearTimeout 조건이 될떄까지 반복
 
       // 1. 1초 뒤에 body 태그의 색상을 빨간색 변경
+      // const body = document.querySelector("body");
+
+      // // 2. 1초 뒤에 body 태그의 색상을 빨 -> 1초 뒤 주 .... -> 1초 뒤 파란색
+      // setTimeout(function (cb) {
+      //   body.style.backgroundColor = "red";
+      //   cb(
+      //     setTimeout(function (cb) {
+      //       body.style.backgroundColor = "orange";
+      //       cb(
+      //         setTimeout(function (cb) {
+      //           body.style.backgroundColor = "yellow";
+      //           cb(
+      //             setTimeout(function (cb) {
+      //               body.style.backgroundColor = "green";
+      //               cb(
+      //                 setTimeout(function (cb) {
+      //                   body.style.backgroundColor = "blue";
+      //                 }, 1000)
+      //               );
+      //             }, 1000)
+      //           );
+      //         }, 1000)
+      //       );
+      //     }, 1000)
+      //   );
+      // }, 1000);
+
       const body = document.querySelector("body");
 
-      // 2. 1초 뒤에 body 태그의 색상을 빨 -> 1초 뒤 주 .... -> 1초 뒤 파란색
-      setTimeout(function (cb) {
-        body.style.backgroundColor = "red";
-        cb(
-          setTimeout(function (cb) {
-            body.style.backgroundColor = "orange";
-            cb(
-              setTimeout(function (cb) {
-                body.style.backgroundColor = "yellow";
-                cb(
-                  setTimeout(function (cb) {
-                    body.style.backgroundColor = "green";
-                    cb(
-                      setTimeout(function (cb) {
-                        body.style.backgroundColor = "blue";
-                      }, 1000)
-                    );
-                  }, 1000)
-                );
-              }, 1000)
-            );
-          }, 1000)
-        );
-      }, 1000);
+      function colorChange(color) {
+        return new Promise(function (resolve, reject) {
+          setTimeout(function () {
+            body.style.backgroundColor = color;
+            resolve();
+          }, 1000);
+        });
+      }
+
+      colorChange("red")
+        .then(function () {
+          return colorChange("orange");
+        })
+        .then(function () {
+          return colorChange("yellow");
+        })
+        .then(function () {
+          return colorChange("green");
+        })
+        .then(function () {
+          return colorChange("blue");
+        });
 
       /////////////////////////////////////////
     </script>
