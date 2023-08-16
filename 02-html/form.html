@@ -1,86 +1,99 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Form & Input tag</title>
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form & Input tag</title>
+  </head>
 
-<body>
+  <body>
+    <h1>폼 태그 종류에 대해 알아보자</h1>
 
-  <h1>폼 태그 종류에 대해 알아보자</h1>
-  
-  <!-- form tag : 사용자로부터 입력받는 요소(input, select, textarea)들을 감싸는 태그 
+    <!-- form tag : 사용자로부터 입력받는 요소(input, select, textarea)들을 감싸는 태그 
       form tag의 attribute action, method 가 있는데, "서버"와 연관된 내용 -> 추후 소개
       화면에 드러나지 않는 추상적인 태그 (양식)
   -->
-  <form>
-    <!-- 모든 input type에는 "name" attribute를 가질 수 있음 ("서버") -->
-    Text <input type="text">
-    Text <input type="text" disabled>
+    <form>
+      <!-- 모든 input type에는 "name" attribute를 가질 수 있음 ("서버") -->
+      Text <input type="text" /> Text <input type="text" disabled />
 
-    <br>
-    <!-- 웹 접근성에 적합 -> 사용자가 편리하게 사용할 수 있다 -->
-    <label for="user-email">이메일</label>
-    <input type="email" id="user-email" placeholder="ex@gmail.com">
+      <br />
+      <!-- 웹 접근성에 적합 -> 사용자가 편리하게 사용할 수 있다 -->
+      <label for="user-email">이메일</label>
+      <input type="email" id="user-email" placeholder="ex@gmail.com" />
 
-    <br>
-    <!-- textarea : 여러줄을 입력받는 요소
+      <br />
+      <!-- textarea : 여러줄을 입력받는 요소
         - cols, row : 가로, 세로 길이를 나타냄
         - 마우스로 textarea 크기 조절 가능 -->
-    <textarea cols="30" rows="3" placeholder="문의사항을 입력해주세요"></textarea>
-    
-    
-    <br>
+      <textarea
+        cols="30"
+        rows="3"
+        placeholder="문의사항을 입력해주세요"
+      ></textarea>
 
-    <input type="color">
-    <input type="range">
-    <input type="file">
-    <input type="number">
-    <input type="date">
-    <input type="datetime-local">
+      <br />
 
-    <br>
+      <input type="color" />
+      <input type="range" />
+      <input type="file" />
+      <input type="number" />
+      <input type="date" />
+      <input type="datetime-local" />
 
-    <!-- checkbox, radio는 같은 name 속성 값을 부여해 카테고리화 해주어야 함-->
-    <!-- checked attribute : 기본으로 체크되어 있도록 해줌  -->
-    <h5>당신의 취미는?</h5>
-    <input type="checkbox" name="interest" value="badminton">배드민턴
-    <input type="checkbox" name="interest" value="basketball">농구
-    <input type="checkbox" name="interest" value="movie">영화보기
-    <input type="checkbox" name="interest" value="lay_down">누워있기
-  
-    <h5>당신의 성별은?</h5>
-    <input type="radio" name="gender" value="f" id="genderF"><label for="genderF">여자</label>
-    <input type="radio" name="gender" value="m" id="genderM"><label for="genderM">남자</label>
+      <br />
 
-    <br>
-    <!-- 단순한 버튼 -->
-    <input type="button" value="버튼1">
-    <button type="button">버튼2</button>
+      <!-- checkbox, radio는 같은 name 속성 값을 부여해 카테고리화 해주어야 함-->
+      <!-- checked attribute : 기본으로 체크되어 있도록 해줌  -->
+      <h5>당신의 취미는?</h5>
+      <input type="checkbox" name="interest" value="badminton" />배드민턴
+      <input type="checkbox" name="interest" value="basketball" />농구
+      <input type="checkbox" name="interest" value="movie" />영화보기
+      <input type="checkbox" name="interest" value="lay_down" />누워있기
 
-    <br>
-    <!-- 폼을 "제출" 버튼 -->
-    <input type="submit" value="제출">
-    <button type="submit">제출2</button>
+      <h5>당신의 성별은?</h5>
+      <input type="radio" name="gender" value="f" id="genderF" /><label
+        for="genderF"
+        >여자</label
+      >
+      <input type="radio" name="gender" value="m" id="genderM" /><label
+        for="genderM"
+        >남자</label
+      >
 
-    <br>
-    <select name="flower">
-      <optgroup label="red-flowver">
-        <option value="a">장미</option>
-        <option value="b">동백꽃</option>
-        <option value="c" selected>몰라</option>
-      </optgroup>
-      <optgroup label="white-flowver">
-        <option value="a">장미</option>
-        <option value="b">동백꽃</option>
-        <option value="c" selected>몰라</option>
-      </optgroup>
-    </select>
-  </form>
+      <br />
+      <!-- 
+      button type, input type   
+      - button : 클릭 가능한 버튼
+        폼태그 바깥에 존재할 때 기본 값
+      - submit : 폼을 제출하는 버튼
+        폼 태그 안에 있을 때 기본 값
 
+    * 타입을 명시적으로 써주는게 안전하다   
+    -->
 
+      <!-- 단순한 버튼 -->
+      <input type="button" value="버튼1" />
+      <button type="button">버튼2</button>
 
-  
-</body>
+      <br />
+      <!-- 폼을 "제출" 버튼 -->
+      <input type="submit" value="제출" />
+      <button type="submit">제출2</button>
+
+      <br />
+      <select name="flower">
+        <optgroup label="red-flowver">
+          <option value="a">장미</option>
+          <option value="b">동백꽃</option>
+          <option value="c" selected>몰라</option>
+        </optgroup>
+        <optgroup label="white-flowver">
+          <option value="a">장미</option>
+          <option value="b">동백꽃</option>
+          <option value="c" selected>몰라</option>
+        </optgroup>
+      </select>
+    </form>
+  </body>
 </html>
