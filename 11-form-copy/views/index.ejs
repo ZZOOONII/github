@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>폼</title>
+  </head>
+  <body>
+    <h1><%= title %></h1>
+
+    <form action="/postForm" method="post">
+      이름
+      <input
+        type="text"
+        name="name"
+        placeholder="이름을 입력하세요"
+        required
+        minlength="3"
+      />
+      <br />
+      <br />
+      <fieldset>
+        <legend>성별</legend>
+        <input type="radio" name="gender" value="female" />
+        <label for="female">Female</label>
+        <input type="radio" name="gender" value="male" />
+        <label for="male">Male</label>
+      </fieldset>
+      <br />
+      <fieldset>
+        <legend>생년월일</legend>
+        <select name="year" required>
+          <%for(let i=1930; i < 2024; i++){%>
+          <option value="<%= i%>"><%= i%></option>
+          <%}%>
+        </select>
+        년
+        <select name="month" required>
+          <%for(let i=1; i < 13; i++){%>
+          <option value="<%= i%>"><%= i%></option>
+          <%}%>
+        </select>
+        월
+        <select name="day" required>
+          <%for(let i=1; i < 32; i++){%>
+          <option value="<%= i%>"><%= i%></option>
+          <%}%>
+        </select>
+        일
+      </fieldset>
+      <br />
+      <fieldset>
+        <legend>관심사</legend>
+        <input type="checkbox" name="hobby" value="여행" />여행
+        <input type="checkbox" name="hobby" value="패션" />패션
+        <input type="checkbox" name="hobby " value="음식" />음식
+      </fieldset>
+      <br />
+      <fieldset action="/" method="get">
+        <legend>선택</legend>
+        <div>
+          <label for="head">좋아하는 색상</label>
+          <input type="color" name="color" value="#eee" />
+        </div>
+        <br />
+        <div>
+          <label for="head">좋아하는 숫자</label>
+          <input type="number" name="number" />
+        </div>
+      </fieldset>
+      <br />
+      <button>회원가입</button>
+    </form>
+  </body>
+</html>
+
+<!-- ///////////////////////////////////////////////////////////////////////  -->
