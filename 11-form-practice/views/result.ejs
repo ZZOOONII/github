@@ -8,17 +8,20 @@
   <body>
     <h1>폼 전송 결과</h1>
     <ul>
-      <li>이름: <%= user.username%></li>
-      <li>성별: <%= user.gender%></li>
-      <li>
-        생일: <%= user.birthYear%>년 <%= user.birthMonth%>월 <%=
-        user.birthDay%>일
-      </li>
-      <li>취미: <%= user.hobby%></li>
-      <% if (user.myColor) { %>
-      <li>좋아하는 색상: <%= user.myColor%></li>
-      %>} %> <% if (user.myNumber) { %> } %>
-      <li>좋아하는 숫자: <%= user.myNumber%></li>
+      <ul>
+        <li>이름: <%=userInfo.name%></li>
+        <li>성별: <%=userInfo.gender%></li>
+        <li>
+          생일: <%=userInfo.year%>년<%=userInfo.month%>월<%=userInfo.day%>일
+        </li>
+        <%if(userInfo.interest) {%>
+        <li>취미: <%=userInfo.interest%></li>
+        <%}%> <%if(userInfo.color) {%>
+        <li>좋아하는 색상: <%=userInfo.color%></li>
+        <%}%> <%if(userInfo.number) {%>
+        <li>좋아하는 숫자: <%=userInfo.number%></li>
+        <%}%>
+      </ul>
     </ul>
   </body>
 </html>
