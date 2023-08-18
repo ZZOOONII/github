@@ -8,25 +8,10 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 app.get("/", (req, res) => {
-  res.render("dynamic2");
-});
-
-app.get("/ajax", (req, res) => {
-  console.log(req.query);
-  res.send(req.query);
-});
-
-app.post("/ajax", (req, res) => {
-  console.log(req.body);
-  res.send(req.body);
+  res.render("dynamic");
 });
 
 app.get("/axios", (req, res) => {
-  console.log(req.query);
-  res.send(req.query);
-});
-
-app.get("/img", (req, res) => {
   console.log(req.query);
   res.send(req.query);
 });
@@ -35,26 +20,6 @@ app.post("/axios", (req, res) => {
   console.log(req.body);
   // res.send(req.body);
   res.send({ name: req.body.name, gender: req.body.gender, msg: "반가워!!" });
-});
-
-app.get("/fetch", (req, res) => {
-  console.log(req.query);
-  res.send(req.query);
-});
-
-app.post("/fetch", (req, res) => {
-  console.log(req.body);
-  res.send(req.body);
-});
-
-app.post("/fetch", (req, res) => {
-  console.log(req.body);
-  res.send(req.body);
-});
-
-app.get("/fetch", (req, res) => {
-  console.log(req.query);
-  res.send(req.query);
 });
 
 app.listen(PORT, function () {
