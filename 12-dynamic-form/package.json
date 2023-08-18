@@ -1,8 +1,8 @@
 {
-  "name": "temp-prj",
+  "name": "12-dynamic-form",
   "version": "1.0.0",
-  "description": "임의의 프로젝트입니다.",
-  "main": "app.js",
+  "description": "",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
