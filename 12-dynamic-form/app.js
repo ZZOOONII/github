@@ -3,11 +3,10 @@ const app = express();
 const PORT = 8000;
 
 app.set("view engine", "ejs");
-app.set("/views", "views");
+app.use("/views", express.static(__dirname + "/views"));
 app.use(express.urlencoded({ extended: true }));
-app.use(express.json()); // json 형식으로 데이터를 주고 받음
+app.use(express.json());
 
-// GET / 경로: 요청시 main 페이지 보여주기
 app.get("/", (req, res) => {
   res.render("dynamic");
 });
@@ -22,8 +21,30 @@ app.post("/ajax", (req, res) => {
   res.send(req.body);
 });
 
+app.get("/axios", (req, res) => {
+  console.log(req.query);
+  res.send(req.query);
+});
+
+app.post("/axios", (req, res) => {
+  console.log(req.body);
+
+  // res.send(req.body);
+  res.send({ name: req.body.name, gender: req.body.gender, msg: "반가워!!" });
+});
+
+app.get("/fetch", (req, res) => {
+  console.log(req.query);
+  res.send(req.query);
+});
+
+app.post("/fetch", (req, res) => {
+  console.log(req.body);
+  res.send(req.body);
+});
+
 app.listen(PORT, function () {
-  console.log(`${PORT} is opening!`);
+  console.log(`Port ${PORT} is opening!`);
 });
 
 // 리더님꺼
