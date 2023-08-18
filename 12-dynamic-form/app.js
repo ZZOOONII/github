@@ -26,6 +26,11 @@ app.get("/axios", (req, res) => {
   res.send(req.query);
 });
 
+app.get("/img", (req, res) => {
+  console.log(req.query);
+  res.send(req.query);
+});
+
 app.post("/axios", (req, res) => {
   console.log(req.body);
 
