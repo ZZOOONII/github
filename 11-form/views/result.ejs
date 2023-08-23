@@ -2,32 +2,42 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>폼 전송 결과</title>
-
-    <style>
-      span {
-        color: blue;
-        font-weight: 700;
-      }
-    </style>
+    <title>실습 결과 예시</title>
+    <link rel="stylesheet" href="/static/index.css" />
   </head>
+  <style>
+    body {
+      background-color: #1d1d1d;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .card {
+      text-align: center;
+      background-color: #fffff8;
+      border-radius: 20px;
+      width: 300px;
+      padding: 30px 10px;
+    }
+  </style>
   <body>
-    <!-- <h1><%= title %> 폼 결과 확인하기</h1>
-    <div><span><%= userInfo.id %></span>님 환영합니다!</div>
-    <div>비밀번호는 <span><%= userInfo.pw %></span>이군요!</div>
-    <div>이메일은 <span><%= userInfo.email %></span>이시네요!</div>
-    <div><span><%= userInfo.grade %></span>학년 이군요!</div> -->
-
-    <h1><%= title %> 폼 결과 확인하기</h1>
-
-    <div><span><%= userInfo.id %></span>님 환영합니다.</div>
-    <div>비밀번호는 <span><%= userInfo.pw %></span>이군요!</div>
-
-    <% if(userInfo.email){ %>
-    <div>이메일은 <span><%= userInfo.email %></span>이군요!</div>
-    <% } %><% if(userInfo.grade){ %>
-    <div><span><%= userInfo.grade %></span>학년 이군요!</div>
-    <% } %>
+    <div class="card">
+      <img src="<%= filePath%>" width="200" />
+      <h3><%=user.id%>님 환영합니다!</h3>
+      <ul>
+        <li>비밀번호: <%=user.pwd%></li>
+        <li>이름: <%=user.name%></li>
+        <li>나이: <%=user.age%></li>
+      </ul>
+    </div>
   </body>
 </html>
