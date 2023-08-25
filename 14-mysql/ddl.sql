@@ -62,3 +62,14 @@ alter table product change new_column new_column2 int; -- 컬럼명 변경
 
 -- 5-3. 컬럼 삭제
 alter table product drop new_column2;
+
+create table member (
+	id varchar(20) primary key,
+    name varchar(5) not null,
+    age int,
+    gender varchar(2) not null,
+    email varchar(50),
+    promotion varchar(2) default 'x'
+);
+
+desc member;
