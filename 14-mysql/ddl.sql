@@ -69,7 +69,26 @@ create table member (
     age int,
     gender varchar(2) not null,
     email varchar(50),
-    promotion varchar(2) default 'x'
+    promotion varchar(2)
+);
+DESC member;
+
+alter table member modify id varchar(10);
+alter table member drop column age;
+alter table member add interest varchar(100);
+
+DESC member;
+
+create table user(
+id varchar(10) not null primary key,
+pw varchar(20) not null,
+name varchar(5) not null,
+gender enum('f','m','') default'',
+birthday date not null,
+age int(3) not null default 0
 );
 
-desc member;
+DESC user;
+
+
+
