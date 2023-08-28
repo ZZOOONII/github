@@ -13,6 +13,7 @@ desc visitor;
 INSERT INTO visitor (name, comment) VALUES("홍길동", "내가 왔다.");
 INSERT INTO visitor (name, comment) VALUES("이찬혁", "으라차차");
 INSERT INTO visitor (name, comment) VALUES("이수현", "안뇽뇽");
+insert into visitor values(null,'sean','hi')
 select * from visitor;
 -- user 라는 새로운 계정(mysql 접속 가능한 계정) 생성
 create user 'user'@'%' identified with mysql_native_password by '1234';
