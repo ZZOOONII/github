@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- axios -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <style>
+      p {
+        color: gray;
+        font-size: 12px;
+      }
+
+      .success {
+        color: blue;
+        font-weight: 700;
+      }
+
+      .error {
+        color: red;
+        font-weight: 700;
+      }
+    </style>
+  </head>
+  <body>
+    <h1><%= title %></h1>
+
+    <hr />
+    <h2>실습1. MVC 구조로 변경</h2>
+    <p>
+      (참고) app.js에 저장한 아이디는 banana이고, 비밀번호는 4321입니다.
+      아이디와 비밀번호가 일치할 때와 불일치할 때 어떻게 다른지 확인해보세요!!
+    </p>
+    <form name="login">
+      <label for="userId">아이디</label>
+      <input type="text" id="userId" name="userId" required />
+      <label for="userPw">비밀번호</label>
+      <input type="password" id="userPw" name="userPw" required />
+      <button type="button" onclick="clickLogin();">로그인</button>
+    </form>
+    <div class="login-result"></div>
+
+    <script>
+      const loginResult = document.querySelector('.login-result');
+
+      function clickLogin() {
+        console.log('click login');
+
+        const form = document.forms['login'];
+        console.dir(form);
+        const data = {
+          userId: form.userId.value,
+          userPw: form.userPw.value,
+        };
+
+        // form validation
+        // console.log(form.userId.checkValidity());
+        // console.log(form.userPw.checkValidity());
+        if (!form.userId.checkValidity() || !form.userPw.checkValidity()) {
+          loginResult.textContent = '아이디와 비밀번호는 필수 값입니다.';
+          return;
+        }
+
+        axios({
+          method: 'POST',
+          url: '/practice1',
+          data: data,
+        }).then(function (response) {
+          console.log(response);
+          console.log(response.data);
+
+          if (response.data.isSuccess) {
+            // loginResult.textContent = `${response.data.userId}님! 로그인 성공😁`; // 실습
+            loginResult.textContent = `${response.data.userInfo.name}님! 로그인 성공😁`; // 추가 실습
+            loginResult.classList.remove('error');
+            loginResult.classList.add('success');
+          } else {
+            loginResult.textContent = '아이디 또는 패스워드 오류😥';
+            loginResult.classList.remove('success');
+            loginResult.classList.add('error');
+          }
+        });
+      }
+    </script>
+  </body>
+</html>
