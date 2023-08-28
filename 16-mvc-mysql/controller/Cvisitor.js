@@ -5,11 +5,11 @@ exports.main = (req, res) => {
 };
 
 exports.getVisitors = (req, res) => {
-  // [BEFORE]
-  // res.render("visitor", { data: Visitor.getVisitors() });
+  // [before]
+  // res.render('visitor', { data: Visitor.getVisitors() });
 
-  // [AFTER]
-  // console.log(Visitor.getVisitors());
+  // [after]
+  // console.log(Visitor.getVisitors())
   Visitor.getVisitors((result) => {
     console.log("controller >>", result);
     res.render("visitor", { data: result });
@@ -17,11 +17,21 @@ exports.getVisitors = (req, res) => {
 };
 
 exports.postVisitor = (req, res) => {
-  console.log(req.body);
-  // 예상 {name:xx, comment:yy}
+  console.log(req.body); // { name: xx, comment: yy }
+  const { name, comment } = req.body;
 
   Visitor.postVisitor(req.body, (insertId) => {
-    console.log("controller >>", insertId);
-    res.send({ id: insertId, name: req.body.name, comment: req.body.comment });
+    console.log("controller >> ", insertId);
+    res.send({ id: insertId, name: name, comment: comment });
+  });
+};
+
+exports.deleteVisitor = (req, res) => {
+  console.log(req.body); // { id: xx }
+  const { id } = req.body;
+
+  Visitor.deleteVisitor(id, (result) => {
+    console.log("controller >>", result); // true
+    res.send(result); // res.send(true)
   });
 };
