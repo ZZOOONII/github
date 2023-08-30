@@ -13,7 +13,6 @@ desc visitor;
 INSERT INTO visitor (name, comment) VALUES("홍길동", "내가 왔다.");
 INSERT INTO visitor (name, comment) VALUES("이찬혁", "으라차차");
 INSERT INTO visitor (name, comment) VALUES("이수현", "안뇽뇽");
-insert into visitor values(null,'sean','hi')
 select * from visitor;
 -- user 라는 새로운 계정(mysql 접속 가능한 계정) 생성
 create user 'user'@'%' identified with mysql_native_password by '1234';
@@ -21,6 +20,10 @@ create user 'user'@'%' identified with mysql_native_password by '1234';
 grant all privileges on *.* to 'user'@'%' with grant option;
 -- mysql 캐시 새로고침
 flush privileges;
--- mysql 데이터베이스의 user 테이블에서 새로 생성된 "user" 계정 확인 가능
+-- mysql 데이터베이스의 user 테이블에서 새로 생성된 "user" 계정 확인 가능C:\Users\user\Desktop\github\16-mvc-mysql\routes\index.js
+C:\Users\user\Desktop\github\16-mvc-mysql\model\Visitor.js
+C:\Users\user\Desktop\github\16-mvc-mysql\static\visitor.js
+C:\Users\user\Desktop\github\16-mvc-mysql\index.sql
 show databases;
 select * from mysql.user;
+drop table visitor;
