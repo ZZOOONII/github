@@ -1,9 +1,16 @@
 const express = require("express");
 const session = require("express-session");
 const app = express();
+const dotenv = require("dotenv");
+dotenv.config();
 const PORT = 8080;
 
 app.set("view engine", "ejs");
+
+app.get("/", (req, res) => {
+  console.log(process.env.NAME);
+  res.send("hello, world");
+});
 
 app.use(
   session({
