@@ -10,7 +10,7 @@ const PORT = process.env.PORT;
 
 app.get("/", (req, res) => {
   console.log(process.env.NAME);
-  console.log(process.env.NODE);
+  console.log(process.env.NODE_ENV);
   res.send("hello, world");
 });
 
