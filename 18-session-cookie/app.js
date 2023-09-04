@@ -10,10 +10,16 @@ app.use(express.json());
 
 // TODO: cookie parser 미들웨어 등록
 app.use(cookieParser());
+<<<<<<< HEAD
 const mycookieConf = {
   httpOnly: true,
   maxAge: 20 * 1000,
   signed: true,
+=======
+const myCookieConf = {
+  httpOnly: true,
+  maxAge: 86400 * 1000, // 1day
+>>>>>>> 78e2708f973d073c0b689a64a43552c6a6cd76de
 };
 
 app.get("/", (req, res) => {
@@ -23,6 +29,7 @@ app.get("/", (req, res) => {
   // console.log('req.cookies.popup >> ', req.cookies.popup);
 
   // TODO: index.ejs render할 때 두 번째 인자로 popup key 로 요청의 쿠키값 보내기
+<<<<<<< HEAD
 
   app.get("/setCookie", (req, res) => {
     // res.cookie(쿠키 이름, 쿠키 값, 쿠키 옵션)
@@ -32,12 +39,21 @@ app.get("/", (req, res) => {
 
   const popup = req.cookies.popup;
   res.render("index", {});
+=======
+  const popup = req.cookies.popup;
+  res.render("index", { popup });
+>>>>>>> 78e2708f973d073c0b689a64a43552c6a6cd76de
 });
 
 app.post("/setcookie", (req, res) => {
   // TODO: 쿠키 생성
   // 쿠키 이름: 'popup', 쿠키 값: 'hide'
+<<<<<<< HEAD
   res.cookie("popup", "hide", mycookieConf);
+=======
+  res.cookie("popup", "hide", myCookieConf);
+
+>>>>>>> 78e2708f973d073c0b689a64a43552c6a6cd76de
   res.send("쿠키 설정 성공!!");
 });
 
