@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <%- include('include', {title: 'Login' }) %>
+    <link rel="stylesheet" href="/static/login.css" />
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: rbg(46, 51, 56);
+      }
+
+      .login-box {
+        width: 20rem;
+        max-width: 90%;
+        box-shadow: 0 0 10px #0003;
+        border-radius: 10px;
+        padding: 30px 20px;
+        text-align: center;
+      }
+
+      .login-box p {
+        color: #aaa;
+        font-size: 14px;
+      }
+
+      .login-box .input-group-text {
+        width: 50px;
+      }
+
+      .login-box .btn {
+        margin-bottom: 20px;
+      }
+    </style>
+</head>
+
+<body>
+  <div class="login-box">
+    <h1>로그인</h1>
+    <p>
+      참고! 정답 아이디는 <b>banana</b> 이고<br />
+      비밀번호는 <b>1234</b> 입니다.
+    </p>
+
+    <form action="/login" method="POST">
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="id">ID</span>
+        <input type="text" class="form-control" aria-label="id input" aria-describedby="id" name="id" />
+      </div>
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="pw">PW</span>
+        <input type="password" class="form-control" aria-label="pw input" aria-describedby="pw" name="pw" />
+      </div>
+
+      <button type="submit" class="btn btn-dark">Login</button>
+      <br />
+      <a href="/">Home 이동하기</a>
+    </form>
+  </div>
+</body>
+
+</html>

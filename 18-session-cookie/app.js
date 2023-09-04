@@ -15,7 +15,7 @@ const mycookieConf = {
   httpOnly: true,
   maxAge: 20 * 1000,
   signed: true,
-=======
+
 const myCookieConf = {
   httpOnly: true,
   maxAge: 86400 * 1000, // 1day
@@ -39,7 +39,7 @@ app.get("/", (req, res) => {
 
   const popup = req.cookies.popup;
   res.render("index", {});
-=======
+
   const popup = req.cookies.popup;
   res.render("index", { popup });
 >>>>>>> 78e2708f973d073c0b689a64a43552c6a6cd76de
@@ -50,7 +50,7 @@ app.post("/setcookie", (req, res) => {
   // 쿠키 이름: 'popup', 쿠키 값: 'hide'
 <<<<<<< HEAD
   res.cookie("popup", "hide", mycookieConf);
-=======
+
   res.cookie("popup", "hide", myCookieConf);
 
 >>>>>>> 78e2708f973d073c0b689a64a43552c6a6cd76de
