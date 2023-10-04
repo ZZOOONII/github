@@ -124,7 +124,7 @@ alphabets.forEach(function (alpha, idx, arr) {
   console.log(alpha, idx, arr);
 });
 
-let numbers = [1, 2, 3, 4, 5, 6];
+// let numbers = [1, 2, 3, 4, 5, 6];
 var sum1 = 0;
 var sum2 = 0;
 var sum3 = 0;
@@ -204,3 +204,13 @@ const result = numbers.reduce((accumulator, currentValue) => {
   return accumulator + currentValue;
 }, initialValue);
 console.log(result); // 115
+
+//////////////////////////
+// 여러 배열 합치는 방법
+// 1. concat()
+const arr_1 = [1, 2, 3];
+const arr_2 = [3, 4, 5];
+console.log(arr_1.concat(arr_2)); // [ 1, 2, 3, 3, 4, 5 ]
+
+// 2. ... spread
+console.log([...arr_1, ...arr_2]); // [ 1, 2, 3, 3, 4, 5 ]
