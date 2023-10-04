@@ -24,6 +24,7 @@ export default function Alphabet() {
       alpha: 'e',
     },
   ]);
+
   const [inputAlpha, setInputAlpha] = useState('');
 
   const addAlpha = () => {
