@@ -1,6 +1,6 @@
 // 문자열 관련 내장 메서드
-let str1 = "Strawberry Moon";
-let str2 = "    Strawberry Moon    ";
+let str1 = 'Strawberry Moon';
+let str2 = '    Strawberry Moon    ';
 
 // 문자열 인덱싱
 console.log(str1[0]);
@@ -23,31 +23,31 @@ console.log(str2.trim().length); // 'Strawberry Moon'.length 와 동일
 
 // indexOf() 글자 위치 찾기
 // 위치(index): 0부터 시작
-console.log(str1.indexOf("w"));
-console.log(str1.indexOf("r"));
-console.log(str1.indexOf("x")); // 존재하지 않는 문자에 대해 검색하면 -1 반환
+console.log(str1.indexOf('w'));
+console.log(str1.indexOf('r'));
+console.log(str1.indexOf('x')); // 존재하지 않는 문자에 대해 검색하면 -1 반환
 
 // slice() 문자열 자르기
 console.log(str1.slice(11)); // 11 번 위치의 글자 ~ 끝
 console.log(str1.slice(1, 5)); // start(1) ~ end-1(4)까지 자르기
 
 // replace() 문자열 바꾸기
-console.log(str1.replace("a", "x"));
-console.log(str1.replace("r", "x"));
-console.log(str1.replaceAll("r", "*"));
+console.log(str1.replace('a', 'x'));
+console.log(str1.replace('r', 'x'));
+console.log(str1.replaceAll('r', '*'));
 
 // split() 문자열 쪼개기 (배열로 변환)
-let date = "23.03.10";
-console.log(date.split("."));
-console.log(date.split("3"));
+let date = '23.03.10';
+console.log(date.split('.'));
+console.log(date.split('3'));
 
 // repeat()
-console.log("hi".repeat(5));
+console.log('hi'.repeat(5));
 
 ////////////////////////////////////////
 // 배열 내장 메서드
 let arr1 = [1, 2, 3, 4, 5];
-let arr2 = ["rabbit", "puppy", "hamster"];
+let arr2 = ['rabbit', 'puppy', 'hamster'];
 
 // 배열에 값 추가
 // arr1[5] = 6; // arr1 배열의 5번 인덱스에 6이라는 값 추가
@@ -63,7 +63,7 @@ arr1.pop();
 console.log(arr1);
 
 // unshift(): 맨 앞에 요소 추가
-arr1.unshift("cat");
+arr1.unshift('cat');
 console.log(arr1);
 
 // shift(): 맨 앞에 요소 제거
@@ -71,8 +71,8 @@ arr1.shift();
 console.log(arr1);
 
 // includes(요소): 요소 있는지 없는지 검사 (true, false)
-console.log(arr2.includes("apple"));
-console.log(arr2.includes("apple"));
+console.log(arr2.includes('apple'));
+console.log(arr2.includes('apple'));
 
 // reverse()
 console.log(arr1.reverse());
@@ -80,14 +80,14 @@ console.log(arr1); // 원본 배열이 변경된 것
 
 // join(): join 안의 문자열 기준으로 병합
 console.log(arr2);
-console.log(arr2.join(""));
-console.log(arr2.join("-"));
+console.log(arr2.join(''));
+console.log(arr2.join('-'));
 
 // 메서드 체이닝(method chaining)
 // 여러 메서드를 연결해서 사용할 수 있다!d
-console.log("hello".split(""));
-console.log("hello".split("").reverse());
-console.log("hello".split("").reverse().join(""));
+console.log('hello'.split(''));
+console.log('hello'.split('').reverse());
+console.log('hello'.split('').reverse().join(''));
 
 ///////////////////////////////////////////////////
 // 배열에서 반복문 사용하기!
@@ -96,7 +96,7 @@ console.log("hello".split("").reverse().join(""));
 // - forEach() 메서드
 
 const arr3 = [1, 2, 5, 6, 7];
-const alphabets = ["a", "b", "c", "d"];
+const alphabets = ['a', 'b', 'c', 'd'];
 
 for (let a = 0; a < arr3.length; a++) {
   console.log(arr3[a]);
@@ -140,7 +140,7 @@ for (let num of numbers) {
 
 console.log(sum1, sum2, sum3);
 
-console.log("--------------");
+console.log('--------------');
 
 // map, filter, find 메서드
 const arr4 = [1, 2, 3, 4, 5];
@@ -165,27 +165,42 @@ const findResult = arr4.find((e) => e > 2);
 console.log(findResult);
 
 // 퀴즈
-const words = ["dog", "cat", "rabbit", "apple", "wow"];
+const words = ['dog', 'cat', 'rabbit', 'apple', 'wow'];
 
 // 1. 글자 수가 3개 초과인 단어만 필터링
 const result1 = words.filter((word) => word.length > 3);
 console.log(result1);
 
 // 2. 글자에 'a' 문자가 포함되어 있는 단어만 필터링
-const result2 = words.filter((word) => word.includes("a"));
+const result2 = words.filter((word) => word.includes('a'));
 console.log(result2);
 
 // 'str',includes() : true, false 반환 메서드
-const result3 = words.map((word) => word.includes("a"));
+const result3 = words.map((word) => word.includes('a'));
 console.log(result3);
 
 ///////////////////////////////////////
 // for in 반복문
 // 객체의 key를 반복할 수 있는 구문
 
-const me = { name: "sean", gender: "f", hobby: "movie" };
+const me = { name: 'sean', gender: 'f', hobby: 'movie' };
 for (let key in me) {
   console.log(key, me[key]);
   // key : key
   // value : me[key]
 }
+
+//////////////////////////////////////////
+// reduce()
+// : 배열의 각 요소에 대해서 주어진 리듀서(reducer) 함수를 실행하고, "하나의 결과값" 반환
+
+// reduce((acc, cur) => { ... })
+// - acc: 누적되는 값
+// - cur: 현재 요소
+
+const numbers = [1, 2, 3, 4, 5];
+const initialValue = 100;
+const result = numbers.reduce((accumulator, currentValue) => {
+  return accumulator + currentValue;
+}, initialValue);
+console.log(result); // 115
