@@ -79,3 +79,14 @@ const galaxy23: Phone<galaxyOption> = {
 };
 
 console.log(galaxy23);
+
+// 실습 1
+function sum1(a: number, b: number): void {
+  console.log(a + b);
+}
+sum1(5, 11);
+
+// function sum2(...sum2: number[]): number {
+//   //   return sum2;
+// }
+// sum2(5, 11);
